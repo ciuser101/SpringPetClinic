@@ -474,6 +474,19 @@
             </dependencies>
         </profile>
    </profiles>
+   
+   <developers>
+        <developer>
+            <id>ciuser101</id>
+            <name>CI User101</name>
+            <email>sriram.parisa1@gmail.com</email>
+            <organization>Test</organization>
+            <roles>
+                <role>Lead Developer</role>
+            </roles>
+            <timezone>5.5</timezone>
+        </developer>
+    </developers>
 
     <url>demopetclinic</url>
 </project>
