@@ -486,6 +486,16 @@
             </roles>
             <timezone>5.5</timezone>
         </developer>
+        <developer>
+            <id>sriram800</id>
+            <name>Sriram800</name>
+            <email>sriram.parisa2@gmail.com</email>
+            <organization>Test</organization>
+            <roles>
+                <role>Lead Developer</role>
+            </roles>
+            <timezone>5.5</timezone>
+        </developer>
     </developers>
 
     <url>demopetclinic</url>
