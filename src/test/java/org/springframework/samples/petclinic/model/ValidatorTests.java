@@ -2,6 +2,8 @@ package org.springframework.samples.petclinic.model;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Set;
 
@@ -18,6 +20,8 @@ import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
  *         (useful when upgrading to a new version of Hibernate Validator/ Bean Validation)
  */
 public class ValidatorTests {
+	
+	
 
     private Validator createValidator() {
         LocalValidatorFactoryBean localValidatorFactoryBean = new LocalValidatorFactoryBean();
@@ -27,7 +31,7 @@ public class ValidatorTests {
 
     @Test
     public void shouldNotValidateWhenFirstNameEmpty() {
-
+    	
         LocaleContextHolder.setLocale(Locale.ENGLISH);
         Person person = new Person();
         person.setFirstName("");
