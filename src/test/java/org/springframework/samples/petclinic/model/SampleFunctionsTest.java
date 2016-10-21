@@ -12,4 +12,11 @@ public class SampleFunctionsTest {
         String newName = "A" + "A";
         assertThat(oldName).isEqualTo(newName);
 	}
+	
+	@Test
+	public void testAdditionOfNumbers1() {
+        String oldName = "AA";
+        String newName = "A" + "A";
+        assertThat(oldName).isEqualTo(newName);
+	}
 }
