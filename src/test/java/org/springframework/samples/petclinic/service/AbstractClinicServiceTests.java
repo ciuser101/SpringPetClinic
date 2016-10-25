@@ -296,5 +296,13 @@ public abstract class AbstractClinicServiceTests {
        assertThat(visitArr[0].getPet().getId()).isEqualTo(7);
     }
 
+    
+    @Test
+    public void testShouldFindVisitsByPetId136() throws Exception {
+       Collection<Visit> visits = this.clinicService.findVisitsByPetId(7);
+       assertThat(visits.size()).isEqualTo(2);
+       Visit[] visitArr = visits.toArray(new Visit[visits.size()]);
+       assertThat(visitArr[0].getPet().getId()).isEqualTo(7);
+    }
 
 }
