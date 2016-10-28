@@ -474,7 +474,17 @@
             </dependencies>
         </profile>
    </profiles>
-   
-   
+   <developers>
+        <developer>
+            <id>sriramulu.parisa</id>
+            <name>Sriram Parisa</name>
+            <email>sriramulu.parisa@kony.com</email>
+            <organization>Kony</organization>
+            <roles>
+                <role>Lead Developer</role>
+            </roles>
+            <timezone>5.5</timezone>
+        </developer>
+    </developers>
     <url>demopetclinic</url>
 </project>
