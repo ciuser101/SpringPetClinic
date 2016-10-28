@@ -100,6 +100,15 @@ public class VisitControllerTests {
             .andExpect(model().attributeExists("visits"))
             .andExpect(view().name("visitList"));
     }
+    
+    @Test
+    public void testShowVisits3() throws Exception {
+        mockMvc.perform(get("/owners/*/pets/{petId}/visits", TEST_PET_ID))
+            .andExpect(status().isOk())
+            .andExpect(model().attributeExists("visits"))
+            .andExpect(view().name("visitList"));
+    }
+
 
 
 }
