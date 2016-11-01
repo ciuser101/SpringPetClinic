@@ -7,9 +7,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -111,6 +108,14 @@ public class VisitControllerTests {
 
     @Test
     public void testShowVisits311() throws Exception {
+        mockMvc.perform(get("/owners/*/pets/{petId}/visits", TEST_PET_ID))
+            .andExpect(status().isOk())
+            .andExpect(model().attributeExists("visits"))
+            .andExpect(view().name("visitList"));
+    }
+    
+    @Test
+    public void testShowVisits312() throws Exception {
         mockMvc.perform(get("/owners/*/pets/{petId}/visits", TEST_PET_ID))
             .andExpect(status().isOk())
             .andExpect(model().attributeExists("visits"))
