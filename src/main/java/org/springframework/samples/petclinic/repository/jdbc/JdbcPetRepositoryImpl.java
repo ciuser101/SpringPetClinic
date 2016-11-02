@@ -55,9 +55,6 @@ public class JdbcPetRepositoryImpl implements PetRepository {
 
     private OwnerRepository ownerRepository;
 
-    private VisitRepository visitRepository;
-
-
     @Autowired
     public JdbcPetRepositoryImpl(DataSource dataSource, OwnerRepository ownerRepository, VisitRepository visitRepository) {
         this.namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(dataSource);
@@ -67,7 +64,6 @@ public class JdbcPetRepositoryImpl implements PetRepository {
             .usingGeneratedKeyColumns("id");
 
         this.ownerRepository = ownerRepository;
-        this.visitRepository = visitRepository;
     }
 
     @Override
